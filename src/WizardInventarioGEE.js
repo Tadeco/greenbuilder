@@ -539,7 +539,7 @@ export default function WizardInventarioGEE() {
               <legend>Consumo de combustíveis</legend>
               <label>Tipo de combustível:<br /><input type="text" name="combustivel_tipo" value={dados.combustivel_tipo || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
               <label>Quantidade consumida (litros):<br /><input type="number" name="combustivel_qtd" value={dados.combustivel_qtd || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
-              <label>Período de consumo (dias):<br /><input type="number" name="combustivel_periodo" value={dados.combustivel_periodo || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
+              <label>Período de consumo (meses):<br /><input type="number" name="combustivel_periodo" value={dados.combustivel_periodo || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
             </fieldset>
             {/* Campos extras para óleo e gás */}
             {dados.setor && dados.setor.toLowerCase().includes('óleo') && (
@@ -553,7 +553,7 @@ export default function WizardInventarioGEE() {
               <legend>Consumo de energia elétrica</legend>
               <label>Quantidade (kWh):<br /><input type="number" name="energia_qtd" value={dados.energia_qtd || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
               <label>Fonte:<br /><input type="text" name="energia_fonte" value={dados.energia_fonte || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
-              <label>Período de consumo (dias):<br /><input type="number" name="energia_periodo" value={dados.energia_periodo || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
+              <label>Período de consumo (meses):<br /><input type="number" name="energia_periodo" value={dados.energia_periodo || ''} onChange={handleChange} style={{ width: '100%' }} /></label><br />
             </fieldset>
             <fieldset style={{ border: '1px solid #ccc', padding: 8, marginBottom: 8 }}>
               <legend>Uso de frota própria</legend>
