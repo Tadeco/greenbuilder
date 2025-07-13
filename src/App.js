@@ -306,37 +306,12 @@ function App() {
                 <p><strong>WhatsApp:</strong> (21) 96446-2281</p>
               </div>
             </div>
-            <form className="contact-form" onSubmit={e => {
-              e.preventDefault();
-              const form = e.target;
-              const empresa = form[0].value;
-              const nome = form[1].value;
-              const email = form[2].value;
-              const telefone = form[3].value;
-              const setor = form[4].value;
-              const desafio = form[5].value;
-              const subject = encodeURIComponent('Solicitação de Consultoria Gratuita');
-              const body = encodeURIComponent(
-                `Empresa: ${empresa}\nNome: ${nome}\nEmail: ${email}\nTelefone: ${telefone}\nSetor: ${setor}\nDesafio: ${desafio}`
-              );
-              window.location.href = `mailto:tadeuscofield@gmail.com?subject=${subject}&body=${body}`;
-            }}>
-              <h3>Solicite uma Consultoria Gratuita</h3>
-              <input type="text" placeholder="Nome da Empresa" required />
-              <input type="text" placeholder="Seu Nome" required />
-              <input type="email" placeholder="Email" required />
-              <input type="tel" placeholder="Telefone" required />
-              <select required>
-                <option value="">Selecione o Setor</option>
-                <option value="manufatura">Manufatura</option>
-                <option value="varejo">Varejo</option>
-                <option value="logistica">Logística</option>
-                <option value="servicos">Serviços</option>
-                <option value="outro">Outro</option>
-              </select>
-              <textarea placeholder="Descreva seu desafio atual..." required></textarea>
-              <button type="submit" className="submit-btn">Solicitar Consultoria</button>
-            </form>
+            <div className="contact-form" style={{textAlign: 'center', padding: '2rem'}}>
+              <h3>Entre em contato pelo WhatsApp</h3>
+              <a href="https://wa.me/5521964462281" target="_blank" rel="noopener noreferrer" style={{fontSize: '1.2rem', color: '#25D366', textDecoration: 'none', fontWeight: 'bold'}}>
+                Clique aqui para falar conosco no WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </section>
