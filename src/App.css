@@ -723,6 +723,35 @@ section {
   }
 }
 
+/* Responsividade para o wizard GreenBuilder BR */
+@media (max-width: 700px) {
+  .wizard-flex-etapa2 {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+  }
+  .wizard-legendas-etapa2 {
+    flex-direction: column !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+  .wizard-form-etapa2 {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .wizard-legendas-etapa2 > div {
+    font-size: 14px !important;
+    padding: 10px !important;
+  }
+  .wizard-form-etapa2 label, .wizard-form-etapa2 input {
+    font-size: 15px !important;
+  }
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
