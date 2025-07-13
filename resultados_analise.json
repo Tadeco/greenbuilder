@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-07-12T13:33:46.767372",
+  "waste_analysis": {
+    "composition": {
+      "metal": 32.388663967611336,
+      "plastic": 32.388663967611336,
+      "wood": 10.796221322537113,
+      "hazardous": 0.1349527665317139,
+      "general": 24.291497975708502
+    },
+    "total_weight": 370.5,
+    "recyclable_percentage": 75.57354925775978,
+    "estimated_value": 45.34412955465587
+  },
+  "energy_analysis": {
+    "predicted_demand": 2872.7999999999997,
+    "optimization_potential": {
+      "immediate": {
+        "energy_savings_kwh": 104857.2,
+        "cost_savings_usd": 12582.864,
+        "roi_percent": -74.834272,
+        "payback_years": 3.9736581433288958
+      },
+      "short_term": {
+        "energy_savings_kwh": 209714.4,
+        "cost_savings_usd": 25165.728,
+        "roi_percent": -83.222848,
+        "payback_years": 5.960487214993344
+      },
+      "long_term": {
+        "energy_savings_kwh": 314571.6,
+        "cost_savings_usd": 37748.592,
+        "roi_percent": -92.4502816,
+        "payback_years": 13.245527144429653
+      }
+    },
+    "recommendations": [
+      "Substituir equipamentos antigos por versões mais eficientes",
+      "Implementar sistema de iluminação inteligente"
+    ]
+  },
+  "compliance_status": {
+    "status": "compliant",
+    "violations": [],
+    "warnings": [],
+    "risk_score": 0.0
+  },
+  "financial_benefits": {
+    "individual_benefits": {
+      "waste_optimization_savings": 16550.607287449395,
+      "energy_optimization_savings": 25165.728,
+      "compliance_fine_avoidance": 0,
+      "operational_efficiency_gains": 50000
+    },
+    "total_annual_savings": 91716.33528744939,
+    "roi_estimate": -93.88557764750337,
+    "payback_period": 16.354774700698954
+  },
+  "recommendations": [
+    "Implementar dashboard de monitoramento em tempo real",
+    "Estabelecer KPIs ambientais mensais"
+  ]
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Mesa Redonda - Hanwha Ocean</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #00d4aa;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #00d4aa;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #2a5298;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .section-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .section-box h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .hook-box {
+            background: linear-gradient(45deg, #00d4aa, #0099cc);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .problem-card {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .problem-card h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .solution-card {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .solution-card h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+        
+        .timeline {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #00d4aa;
+        }
+        
+        .timeline-number {
+            background: #00d4aa;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .roi-highlight {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .roi-amount {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .cta-box {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .objection-box {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .objection-box h4 {
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        
+        .checklist {
+            background: #e8f5e8;
+            border: 2px solid #28a745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist h3 {
+            color: #155724;
+            margin-bottom: 15px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            color: #666;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #00d4aa;
+            background: #f8f9fa;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 15px;
+            }
+            
+            .section-box, .hook-box, .roi-highlight, .cta-box {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>APRESENTAÇÃO MESA REDONDA - HANWHA OCEAN</h1>
+    <h2 style="text-align: center; color: #666;">Roteiro Estratégico para Posicionamento com IA</h2>
+
+    <div class="hook-box">
+        "Como engenheiro ambiental com especialização em IA aplicada à sustentabilidade, posso demonstrar como a combinação única de inteligência artificial e gestão ambiental pode gerar economia de R$ 1,4 milhões anuais para a Hanwha Ocean, enquanto posiciona a empresa como líder em ESG no setor naval."
+    </div>
+
+    <div class="section-box">
+        <h3>CREDENCIAIS RÁPIDAS</h3>
+        <ul>
+            <li>10+ anos em gestão ambiental</li>
+            <li>Especialização em IA para otimização de processos</li>
+            <li>Experiência em projetos de grande escala</li>
+            <li>ROI comprovado em implementações similares</li>
+        </ul>
+    </div>
+
+    <h2>DIAGNÓSTICO DOS DESAFIOS (3 minutos)</h2>
+
+    <h3>Problemas Identificados na Hanwha Ocean:</h3>
+
+    <div class="problem-grid">
+        <div class="problem-card">
+            <h4>1. Gestão Energética Complexa</h4>
+            <ul>
+                <li>Vocês enfrentam o desafio de otimizar consumo energético em canteiros navais de 4,9 milhões de m²</li>
+                <li>Custo energético representa 15-20% dos custos operacionais</li>
+                <li>Falta de visibilidade em tempo real do consumo</li>
+            </ul>
+        </div>
+
+        <div class="problem-card">
+            <h4>2. Gestão de Resíduos Ineficiente</h4>
+            <ul>
+                <li>Classificação manual de resíduos gera erros e custos</li>
+                <li>Roteirização não otimizada de coleta</li>
+                <li>Falta de rastreabilidade completa</li>
+            </ul>
+        </div>
+
+        <div class="problem-card">
+            <h4>3. Conformidade Ambiental Manual</h4>
+            <ul>
+                <li>Relatórios ambientais consomem 40-60 horas/mês</li>
+                <li>Risco de não conformidades por falha humana</li>
+                <li>Dificuldade em acompanhar mudanças regulatórias</li>
+            </ul>
+        </div>
+
+        <div class="problem-card">
+            <h4>4. Falta de Previsibilidade</h4>
+            <ul>
+                <li>Decisões baseadas em dados históricos, não preditivos</li>
+                <li>Reação a problemas, não prevenção</li>
+                <li>Perda de oportunidades de economia</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>SOLUÇÃO COM IA (5 minutos)</h2>
+
+    <div class="section-box">
+        <h3>Demonstração do Dashboard</h3>
+        <p><em>"Vou demonstrar uma solução que já está funcionando em tempo real..."</em></p>
+    </div>
+
+    <h3>4 Pilares da Solução:</h3>
+
+    <div class="solution-grid">
+        <div class="solution-card">
+            <h4>1. Monitoramento Inteligente em Tempo Real</h4>
+            <ul>
+                <li>Sensores IoT + IA para coleta contínua</li>
+                <li>Dashboard com métricas atualizadas a cada 5 minutos</li>
+                <li>Alertas automáticos para anomalias</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>2. Otimização Energética com IA</h4>
+            <ul>
+                <li>Previsão de demanda baseada em cronogramas</li>
+                <li>Otimização automática de horários de operação</li>
+                <li>Detecção de desperdícios em tempo real</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>3. Gestão Inteligente de Resíduos</h4>
+            <ul>
+                <li>Computer Vision para classificação automática</li>
+                <li>IA para otimização de rotas de coleta</li>
+                <li>Blockchain para rastreabilidade completa</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>4. Conformidade Automatizada</h4>
+            <ul>
+                <li>Relatórios gerados automaticamente</li>
+                <li>Monitoramento contínuo de parâmetros</li>
+                <li>Alertas para mudanças regulatórias</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>PROJETO PILOTO CONCRETO (4 minutos)</h2>
+
+    <div class="section-box">
+        <h3>Escopo do Piloto:</h3>
+        <ul>
+            <li><strong>Área:</strong> Um canteiro naval específico</li>
+            <li><strong>Prazo:</strong> 90 dias para resultados mensuráveis</li>
+            <li><strong>Investimento:</strong> R$ 250.000</li>
+            <li><strong>ROI Esperado:</strong> 480% em 12 meses</li>
+        </ul>
+    </div>
+
+    <h3>Cronograma Detalhado:</h3>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div>
+                <strong>Fase 1 (Dias 1-30): Diagnóstico</strong><br>
+                Análise de dados históricos com IA • Instalação de sensores IoT • Criação de baseline de métricas
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div>
+                <strong>Fase 2 (Dias 31-60): Implementação</strong><br>
+                Desenvolvimento de algoritmos de otimização • Criação do dashboard em tempo real • Integração com sistemas existentes
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div>
+                <strong>Fase 3 (Dias 61-90): Validação</strong><br>
+                Teste em área piloto • Medição de resultados • Relatório executivo com ROI
+            </div>
+        </div>
+    </div>
+
+    <h3>Métricas de Sucesso:</h3>
+    <ul>
+        <li>Redução de 15-25% no consumo energético</li>
+        <li>Diminuição de 30-40% nos custos de gestão de resíduos</li>
+        <li>Redução de 50% no tempo de relatórios ambientais</li>
+        <li>Melhoria de 20% na conformidade ambiental</li>
+    </ul>
+
+    <h2>ROI E ECONOMIAS (3 minutos)</h2>
+
+    <h3>Investimento vs Retorno:</h3>
+
+    <h4>Custos do Projeto:</h4>
+    <ul>
+        <li><strong>Desenvolvimento:</strong> R$ 150.000</li>
+        <li><strong>Infraestrutura:</strong> R$ 50.000</li>
+        <li><strong>Consultoria:</strong> R$ 50.000</li>
+        <li><strong>Total:</strong> R$ 250.000</li>
+    </ul>
+
+    <h4>Economias Anuais:</h4>
+    <ul>
+        <li><strong>Energia:</strong> R$ 800.000 (redução de 20%)</li>
+        <li><strong>Gestão de resíduos:</strong> R$ 300.000 (redução de 35%)</li>
+        <li><strong>Tempo de relatórios:</strong> R$ 200.000 (redução de 60%)</li>
+        <li><strong>Conformidade:</strong> R$ 150.000 (prevenção de multas)</li>
+        <li><strong>Total:</strong> R$ 1.450.000</li>
+    </ul>
+
+    <div class="roi-highlight">
+        <div class="roi-amount">480%</div>
+        <p>ROI em 12 meses • Payback: 2,1 meses</p>
+    </div>
+
+    <h2>DIFERENCIAÇÃO COMPETITIVA (2 minutos)</h2>
+
+    <h3>Por que escolher esta solução:</h3>
+
+    <div class="solution-grid">
+        <div class="solution-card">
+            <h4>1. Especialização Única</h4>
+            <ul>
+                <li>Combinação de IA + Engenharia Ambiental</li>
+                <li>Entendimento profundo do setor naval</li>
+                <li>Experiência em projetos de grande escala</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>2. Metodologia Comprovada</h4>
+            <ul>
+                <li>ROI garantido com metodologia testada</li>
+                <li>Implementação em fases com validação contínua</li>
+                <li>Suporte completo durante todo o processo</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>3. Tecnologia de Ponta</h4>
+            <ul>
+                <li>Algoritmos de IA customizados</li>
+                <li>Integração com sistemas existentes</li>
+                <li>Escalabilidade para toda a operação</li>
+            </ul>
+        </div>
+
+        <div class="solution-card">
+            <h4>4. Benefícios Intangíveis</h4>
+            <ul>
+                <li>Posicionamento como líder em ESG</li>
+                <li>Atração de talentos comprometidos com sustentabilidade</li>
+                <li>Preparação para regulamentações futuras</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>CALL-TO-ACTION (1 minuto)</h2>
+
+    <div class="cta-box">
+        <h3>Proposta Concreta</h3>
+        <p><em>"Gostaria de iniciar este projeto piloto imediatamente. Posso começar na próxima semana com a análise de dados históricos. Em 90 dias, teremos resultados mensuráveis que justificam a expansão para toda a operação da Hanwha Ocean."</em></p>
+    </div>
+
+    <h3>Próximos Passos:</h3>
+    <ol>
+        <li><strong>Reunião técnica detalhada</strong> (próxima semana)</li>
+        <li><strong>Assinatura do contrato piloto</strong> (dentro de 15 dias)</li>
+        <li><strong>Início da implementação</strong> (30 dias)</li>
+        <li><strong>Primeiros resultados</strong> (90 dias)</li>
+    </ol>
+
+    <div class="section-box">
+        <h3>Garantia</h3>
+        <p><em>"Ofereço garantia de ROI. Se não atingirmos pelo menos 300% de retorno em 12 meses, devolvo 50% do investimento."</em></p>
+    </div>
+
+    <h2>PERGUNTAS ESTRATÉGICAS PARA FAZER</h2>
+
+    <h3>Durante a Apresentação:</h3>
+    <ol>
+        <li>"Quais são os maiores desafios ambientais que vocês enfrentam atualmente?"</li>
+        <li>"Como vocês medem o sucesso de iniciativas de sustentabilidade?"</li>
+        <li>"Qual é o impacto de não conformidades ambientais nos custos?"</li>
+    </ol>
+
+    <h3>Para Engajar:</h3>
+    <ol>
+        <li>"Vocês já consideraram IA para otimização ambiental?"</li>
+        <li>"Como vocês veem o futuro da sustentabilidade no setor naval?"</li>
+        <li>"Qual seria o valor de uma redução de 20% nos custos energéticos?"</li>
+    </ol>
+
+    <h2>RESPOSTAS PARA OBJEÇÕES COMUNS</h2>
+
+    <div class="objection-box">
+        <h4>"É muito caro"</h4>
+        <p><em>"O investimento se paga em 2,1 meses. É como comprar um ativo que gera R$ 1,4 milhões por ano."</em></p>
+    </div>
+
+    <div class="objection-box">
+        <h4>"Não temos tempo"</h4>
+        <p><em>"O projeto piloto é em área controlada e não interfere nas operações. Os resultados começam a aparecer em 30 dias."</em></p>
+    </div>
+
+    <div class="objection-box">
+        <h4>"Já temos sistemas"</h4>
+        <p><em>"Perfeito! Nossa solução integra com sistemas existentes e otimiza o que vocês já têm."</em></p>
+    </div>
+
+    <div class="objection-box">
+        <h4>"Precisamos validar"</h4>
+        <p><em>"Entendo. Por isso proponho o projeto piloto com garantia de ROI. Sem risco para vocês."</em></p>
+    </div>
+
+    <h2>MATERIAIS DE APOIO</h2>
+
+    <h3>Para Levar:</h3>
+    <ol>
+        <li><strong>Dashboard protótipo</strong> (arquivo HTML)</li>
+        <li><strong>Proposta técnica detalhada</strong> (documento PDF)</li>
+        <li><strong>Cronograma executivo</strong> (timeline visual)</li>
+        <li><strong>Cases de sucesso</strong> (referências)</li>
+    </ol>
+
+    <h3>Para Enviar Depois:</h3>
+    <ol>
+        <li><strong>Relatório de viabilidade técnica</strong></li>
+        <li><strong>Proposta comercial detalhada</strong></li>
+        <li><strong>Contrato de prestação de serviços</strong></li>
+        <li><strong>Plano de implementação</strong></li>
+    </ol>
+
+    <h2>CHECKLIST PRÉ-APRESENTAÇÃO</h2>
+
+    <div class="checklist">
+        <h3>Preparação Final</h3>
+        <div class="checklist-item">
+            <input type="checkbox" id="check1">
+            <label for="check1">Testar dashboard em diferentes dispositivos</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check2">
+            <label for="check2">Preparar backup da apresentação</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check3">
+            <label for="check3">Revisar números e métricas</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check4">
+            <label for="check4">Preparar respostas para objeções</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check5">
+            <label for="check5">Definir call-to-action específico</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check6">
+            <label for="check6">Preparar materiais de apoio</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check7">
+            <label for="check7">Treinar timing da apresentação</label>
+        </div>
+        <div class="checklist-item">
+            <input type="checkbox" id="check8">
+            <label for="check8">Definir próximos passos claros</label>
+        </div>
+    </div>
+
+    <div class="quote">
+        <h3>ENCERRAMENTO MEMORÁVEL</h3>
+        <p><em>"A Hanwha Ocean tem a oportunidade única de se tornar referência mundial em sustentabilidade no setor naval. Com IA, vocês podem transformar desafios ambientais em vantagens competitivas, gerando economia significativa enquanto lideram a transformação do setor."</em></p>
+        <p><strong><em>"Estou aqui para fazer isso acontecer. Vamos começar hoje?"</em></strong></p>
+    </div>
+</body>
+</html> 

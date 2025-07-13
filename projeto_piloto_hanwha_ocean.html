@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Piloto - Sistema Inteligente de Gestão Ambiental</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        h1 {
+            color: #1e3c72;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #00d4aa;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #1e3c72;
+            font-size: 1.8rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #00d4aa;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #2a5298;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .metric-card {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #1e3c72;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .phase-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .tech-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        
+        .tech-card h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .roi-section {
+            background: linear-gradient(45deg, #00d4aa, #0099cc);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .roi-section h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .roi-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .risk-section {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .risk-section h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+            font-style: italic;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 15px;
+            }
+            
+            .highlight-box, .roi-section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>PROJETO PILOTO: SISTEMA INTELIGENTE DE GESTÃO AMBIENTAL</h1>
+    <h2 style="text-align: center; color: #666;">Hanwha Ocean - 90 Dias para Resultados Mensuráveis</h2>
+
+    <div class="highlight-box">
+        <h3>RESUMO EXECUTIVO</h3>
+        <p><strong>Objetivo:</strong> Implementar um sistema de IA para otimização ambiental em um canteiro naval específico da Hanwha Ocean, demonstrando ROI em 90 dias.</p>
+    </div>
+
+    <div class="metric-grid">
+        <div class="metric-card">
+            <div class="metric-value">R$ 150.000 - 250.000</div>
+            <div class="metric-label">Investimento</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">300-500%</div>
+            <div class="metric-label">ROI Esperado</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">90 dias</div>
+            <div class="metric-label">Prazo MVP</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-value">6 meses</div>
+            <div class="metric-label">Implementação Completa</div>
+        </div>
+    </div>
+
+    <h2>FASE 1: DIAGNÓSTICO E PREPARAÇÃO (Dias 1-30)</h2>
+
+    <h3>1.1 Análise Ambiental Inteligente</h3>
+    <ul>
+        <li><strong>Ferramenta:</strong> IA para análise de dados históricos de resíduos, energia e emissões</li>
+        <li><strong>Entregável:</strong> Dashboard de baseline com métricas atuais</li>
+        <li><strong>Tempo:</strong> 15 dias</li>
+        <li><strong>Custo:</strong> R$ 25.000</li>
+    </ul>
+
+    <div class="phase-box">
+        <h4>Atividades:</h4>
+        <ul>
+            <li>Coleta e análise de dados dos últimos 2 anos</li>
+            <li>Identificação de padrões de desperdício</li>
+            <li>Mapeamento de pontos críticos de impacto ambiental</li>
+            <li>Criação de indicadores de performance (KPIs)</li>
+        </ul>
+    </div>
+
+    <h3>1.2 Sistema de Monitoramento em Tempo Real</h3>
+    <ul>
+        <li><strong>Ferramenta:</strong> Sensores IoT + IA para coleta de dados</li>
+        <li><strong>Entregável:</strong> Plataforma de monitoramento contínuo</li>
+        <li><strong>Tempo:</strong> 20 dias</li>
+        <li><strong>Custo:</strong> R$ 45.000</li>
+    </ul>
+
+    <div class="phase-box">
+        <h4>Atividades:</h4>
+        <ul>
+            <li>Instalação de sensores em pontos estratégicos</li>
+            <li>Desenvolvimento de algoritmos de IA para análise preditiva</li>
+            <li>Interface de dashboard em tempo real</li>
+            <li>Sistema de alertas inteligentes</li>
+        </ul>
+    </div>
+
+    <h2>FASE 2: IMPLEMENTAÇÃO DO MVP (Dias 31-60)</h2>
+
+    <h3>2.1 Otimização de Consumo Energético</h3>
+    <ul>
+        <li><strong>Ferramenta:</strong> IA para previsão e otimização de demanda energética</li>
+        <li><strong>Entregável:</strong> Sistema de gestão energética inteligente</li>
+        <li><strong>Tempo:</strong> 15 dias</li>
+        <li><strong>Custo:</strong> R$ 35.000</li>
+    </ul>
+
+    <div class="phase-box">
+        <h4>Funcionalidades:</h4>
+        <ul>
+            <li>Previsão de demanda energética baseada em cronogramas</li>
+            <li>Otimização automática de horários de operação</li>
+            <li>Detecção de anomalias de consumo</li>
+            <li>Recomendações de economia em tempo real</li>
+        </ul>
+    </div>
+
+    <h3>2.2 Gestão Inteligente de Resíduos</h3>
+    <ul>
+        <li><strong>Ferramenta:</strong> IA para roteirização e classificação de resíduos</li>
+        <li><strong>Entregável:</strong> Sistema de gestão de resíduos otimizado</li>
+        <li><strong>Tempo:</strong> 15 dias</li>
+        <li><strong>Custo:</strong> R$ 30.000</li>
+    </ul>
+
+    <div class="phase-box">
+        <h4>Funcionalidades:</h4>
+        <ul>
+            <li>Classificação automática de resíduos por IA</li>
+            <li>Otimização de rotas de coleta</li>
+            <li>Previsão de geração de resíduos</li>
+            <li>Sistema de rastreabilidade blockchain</li>
+        </ul>
+    </div>
+
+    <h2>FASE 3: TESTE E VALIDAÇÃO (Dias 61-90)</h2>
+
+    <h3>3.1 Projeto Piloto em Área Específica</h3>
+    <ul>
+        <li><strong>Escopo:</strong> Um canteiro naval ou área de produção específica</li>
+        <li><strong>Tempo:</strong> 30 dias</li>
+        <li><strong>Custo:</strong> R$ 15.000</li>
+    </ul>
+
+    <div class="phase-box">
+        <h4>Métricas de Sucesso:</h4>
+        <ul>
+            <li>Redução de 15-25% no consumo energético</li>
+            <li>Diminuição de 30-40% nos custos de gestão de resíduos</li>
+            <li>Redução de 50% no tempo de relatórios ambientais</li>
+            <li>Melhoria de 20% na conformidade ambiental</li>
+        </ul>
+    </div>
+
+    <h3>3.2 Relatório de Resultados</h3>
+    <ul>
+        <li><strong>Entregável:</strong> Relatório executivo com ROI demonstrado</li>
+        <li><strong>Tempo:</strong> 5 dias</li>
+        <li><strong>Custo:</strong> R$ 10.000</li>
+    </ul>
+
+    <h2>TECNOLOGIAS UTILIZADAS</h2>
+
+    <div class="tech-grid">
+        <div class="tech-card">
+            <h4>Backend:</h4>
+            <ul>
+                <li>Python com TensorFlow/PyTorch para IA</li>
+                <li>PostgreSQL para banco de dados</li>
+                <li>APIs RESTful para integração</li>
+                <li>Docker para containerização</li>
+            </ul>
+        </div>
+        
+        <div class="tech-card">
+            <h4>Frontend:</h4>
+            <ul>
+                <li>React.js para dashboard</li>
+                <li>Grafana para visualizações</li>
+                <li>PWA para acesso mobile</li>
+            </ul>
+        </div>
+        
+        <div class="tech-card">
+            <h4>IoT e Sensores:</h4>
+            <ul>
+                <li>Sensores de qualidade do ar</li>
+                <li>Medidores de consumo energético</li>
+                <li>Câmeras para classificação de resíduos</li>
+                <li>GPS para rastreamento de veículos</li>
+            </ul>
+        </div>
+        
+        <div class="tech-card">
+            <h4>IA/ML:</h4>
+            <ul>
+                <li>Algoritmos de previsão temporal</li>
+                <li>Computer Vision para classificação</li>
+                <li>Otimização por algoritmos genéticos</li>
+                <li>Análise de séries temporais</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>CRONOGRAMA DETALHADO</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Semana</th>
+                <th>Atividade</th>
+                <th>Entregável</th>
+                <th>Responsável</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1-2</td>
+                <td>Análise de dados históricos</td>
+                <td>Relatório de baseline</td>
+                <td>Eng. Ambiental + Cientista de Dados</td>
+            </tr>
+            <tr>
+                <td>3-4</td>
+                <td>Instalação de sensores</td>
+                <td>Infraestrutura IoT</td>
+                <td>Equipe técnica</td>
+            </tr>
+            <tr>
+                <td>5-6</td>
+                <td>Desenvolvimento IA</td>
+                <td>Algoritmos de otimização</td>
+                <td>Cientista de Dados</td>
+            </tr>
+            <tr>
+                <td>7-8</td>
+                <td>Desenvolvimento dashboard</td>
+                <td>Interface de usuário</td>
+                <td>Desenvolvedor Frontend</td>
+            </tr>
+            <tr>
+                <td>9-10</td>
+                <td>Integração de sistemas</td>
+                <td>MVP funcional</td>
+                <td>Equipe de integração</td>
+            </tr>
+            <tr>
+                <td>11-12</td>
+                <td>Teste em área piloto</td>
+                <td>Validação de resultados</td>
+                <td>Equipe completa</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Relatório final</td>
+                <td>Documentação completa</td>
+                <td>Eng. Ambiental</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>INVESTIMENTO E ROI</h2>
+
+    <h3>Custos do Projeto Piloto:</h3>
+    <ul>
+        <li><strong>Desenvolvimento:</strong> R$ 150.000</li>
+        <li><strong>Infraestrutura:</strong> R$ 50.000</li>
+        <li><strong>Consultoria:</strong> R$ 50.000</li>
+        <li><strong>Total:</strong> R$ 250.000</li>
+    </ul>
+
+    <h3>Economias Anuais Esperadas:</h3>
+    <ul>
+        <li><strong>Energia:</strong> R$ 800.000 (redução de 20%)</li>
+        <li><strong>Gestão de resíduos:</strong> R$ 300.000 (redução de 35%)</li>
+        <li><strong>Tempo de relatórios:</strong> R$ 200.000 (redução de 60%)</li>
+        <li><strong>Conformidade:</strong> R$ 150.000 (prevenção de multas)</li>
+        <li><strong>Total:</strong> R$ 1.450.000</li>
+    </ul>
+
+    <div class="roi-section">
+        <h3>ROI:</h3>
+        <div class="roi-amount">480%</div>
+        <p>em 12 meses • Payback: 2,1 meses</p>
+    </div>
+
+    <h2>RISCO E MITIGAÇÃO</h2>
+
+    <div class="risk-section">
+        <h3>Riscos Identificados:</h3>
+        <ol>
+            <li><strong>Resistência à mudança:</strong> Treinamento intensivo e comunicação clara</li>
+            <li><strong>Problemas de integração:</strong> Desenvolvimento em fases e testes contínuos</li>
+            <li><strong>Dados incompletos:</strong> Coleta manual inicial + validação cruzada</li>
+            <li><strong>Conformidade regulatória:</strong> Consultoria jurídica especializada</li>
+        </ol>
+    </div>
+
+    <h3>Estratégias de Mitigação:</h3>
+    <ul>
+        <li>Projeto piloto em área controlada</li>
+        <li>Treinamento da equipe desde o início</li>
+        <li>Documentação detalhada de processos</li>
+        <li>Backup de sistemas tradicionais</li>
+    </ul>
+
+    <h2>PRÓXIMOS PASSOS</h2>
+
+    <h3>Apresentação na Mesa Redonda:</h3>
+    <ol>
+        <li><strong>Demonstração:</strong> Mostrar protótipo funcional</li>
+        <li><strong>Validação:</strong> Apresentar casos de sucesso similares</li>
+        <li><strong>Compromisso:</strong> Oferecer garantia de resultados</li>
+        <li><strong>Call-to-Action:</strong> Propor início imediato do projeto</li>
+    </ol>
+
+    <h3>Documentação Necessária:</h3>
+    <ul>
+        <li>Termo de confidencialidade</li>
+        <li>Contrato de prestação de serviços</li>
+        <li>Cronograma detalhado</li>
+        <li>Plano de comunicação</li>
+    </ul>
+
+    <h2>DIFERENCIAÇÃO COMPETITIVA</h2>
+
+    <h3>Por que escolher esta solução:</h3>
+    <ol>
+        <li><strong>Especialização:</strong> Combinação única de IA + Engenharia Ambiental</li>
+        <li><strong>Experiência:</strong> Background em projetos similares</li>
+        <li><strong>ROI Garantido:</strong> Metodologia comprovada</li>
+        <li><strong>Escalabilidade:</strong> Solução adaptável para toda a empresa</li>
+        <li><strong>Inovação:</strong> Tecnologias de ponta em sustentabilidade</li>
+    </ol>
+
+    <h3>Benefícios Intangíveis:</h3>
+    <ul>
+        <li>Posicionamento como líder em ESG</li>
+        <li>Atração de talentos comprometidos com sustentabilidade</li>
+        <li>Melhoria na reputação corporativa</li>
+        <li>Preparação para regulamentações futuras</li>
+    </ul>
+
+    <div class="footer">
+        <p><em>"Este projeto piloto demonstra como a IA pode transformar a gestão ambiental de uma empresa do setor naval, gerando economia significativa enquanto melhora o desempenho sustentável. Em 90 dias, teremos resultados mensuráveis que justificam a expansão para toda a operação."</em></p>
+    </div>
+</body>
+</html> 

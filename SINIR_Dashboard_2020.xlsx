@@ -1,0 +1,58 @@
+[Excel file with the following sheets and structure:]
+
+Sheet: Resumo Nacional
+| Indicador                | Valor           |
+|--------------------------|-----------------|
+| Área Territorial (km²)   | 8.510.296       |
+| População Estimada       | 210.147.125     |
+| PIB Total (R$ 1.000)     | 6.093.497,48    |
+| PIB per Capita (R$)      | 28.996,34       |
+| Unidades da Federação    | 27              |
+| Municípios               | 5.570           |
+
+Sheet: Situação das Declarações
+| Macrorregião   | Estados Declarantes | % Estados | Municípios Declarantes | % Municípios |
+|----------------|--------------------|-----------|-----------------------|--------------|
+| Norte          | 7                  | 100%      | 248                   | 55,11%       |
+| Nordeste       | 8                  | 88,89%    | 651                   | 36,29%       |
+| Sudeste        | 4                  | 100%      | 737                   | 44,18%       |
+| Sul            | 3                  | 100%      | 600                   | 50,38%       |
+| Centro-Oeste   | 4                  | 100%      | 256                   | 54,82%       |
+
+Sheet: Planos de Gestão
+| Indicador                                 | Valor      |
+|-------------------------------------------|------------|
+| Planos estaduais segundo a PNRS           | 20 (74,07%)|
+| Planos municipais segundo a PNRS          | -          |
+| Planos intermunicipais segundo a PNRS     | -          |
+
+Sheet: Gestão Compartilhada
+| Estado         | % Municípios em Soluções Compartilhadas |
+|----------------|----------------------------------------|
+| (dados não disponíveis no sumário)                      |
+
+Sheet: Autossuficiência Financeira
+| Macrorregião   | Custo Total por Habitante (R$/hab) |
+|----------------|------------------------------------|
+| Norte          | -                                  |
+| Nordeste       | -                                  |
+| Sudeste        | -                                  |
+| Sul            | -                                  |
+| Centro-Oeste   | -                                  |
+
+Sheet: Resíduos Sólidos Urbanos
+| Indicador                        | Valor      |
+|----------------------------------|------------|
+| Massa total coletada (t)         | -          |
+| Massa da coleta seletiva (t)     | -          |
+| Cobertura da coleta seletiva (%) | -          |
+
+| Macrorregião   | Aterros Sanitários (t) | Lixões/Aterros Controlados (t) | Total (t) |
+|----------------|-----------------------|-------------------------------|-----------|
+| Norte          | -                     | -                             | -         |
+| Nordeste       | -                     | -                             | -         |
+| Sudeste        | -                     | -                             | -         |
+| Sul            | -                     | -                             | -         |
+| Centro-Oeste   | -                     | -                             | -         |
+
+[Include example charts for "Situação das Declarações" and "Autossuficiência Financeira" sheets.] 

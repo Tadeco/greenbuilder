@@ -1,0 +1,16 @@
+
+Sugestões de Gráficos para Power BI:
+
+1. Cartões/KPIs: Total de resíduos gerados, reciclados, destinados, % de reciclagem, número de municípios participantes.
+2. Gráfico de barras empilhadas: Quantidade de resíduos por tipo e por macrorregião.
+3. Gráfico de pizza: Proporção de cada tipo de resíduo no total nacional.
+4. Gráfico de linha: Evolução anual da geração de resíduos.
+5. Mapa: Distribuição estadual dos resíduos.
+6. Barras horizontais: Comparação entre categorias (saúde, construção civil, industrial, etc.).
+7. Tabela dinâmica: Resumo estadual com indicadores principais.
+8. Gráfico de colunas: Municípios com logística reversa implementada por estado.
+9. Heatmap: Resumo estadual, mostrando quais estados têm maior geração ou melhor desempenho em logística reversa.
+10. Segmentações: Filtros por ano, estado, macrorregião, tipo de resíduo.
+
+Exemplo de DAX para Taxa de Reciclagem:
+TaxaReciclagem = DIVIDE(SUM('Tabela'[Quantidade Reciclada (t)]), SUM('Tabela'[Quantidade Gerada (t)]), 0)
